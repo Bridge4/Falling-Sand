@@ -21,9 +21,10 @@ public class Place_Object : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) || Input.GetMouseButton(0))
         {
-            
+            spawnObject.SetActive(true);
             Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             //Vector3 offset = new Vector3(0, 0, -10);
+            
             Instantiate(spawnObject, pos, Quaternion.identity);
         }
         
